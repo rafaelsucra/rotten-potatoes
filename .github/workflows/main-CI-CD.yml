@@ -22,7 +22,7 @@ jobs:
         uses: docker/build-push-action@v2.7.0
         with:
           context: ./src
-          file: ./src/Dockerfile
+          file: ./src/dockerfile
           push: true
           tags: |
             rafaelsucra/rotten-potatoes:latest
