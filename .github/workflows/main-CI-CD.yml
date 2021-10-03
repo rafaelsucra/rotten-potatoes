@@ -28,6 +28,8 @@ jobs:
             rafaelsucra/rotten-potatoes:latest
             rafaelsucra/rotten-potatoes:${{ github.run_number }}
   CD:
+  #dependencia com o CI primeiro.
+   needs: [CI]
    runs-on: ubuntu-latest
 
     steps:
