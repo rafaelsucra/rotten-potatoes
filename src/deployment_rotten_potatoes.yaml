@@ -2,27 +2,27 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-	name: mongodb
+ name: mongodb
 spec:
-	selector:
-		matchLabels:
-			app: mongodb
-	template:
-		metadata:
-			labels:
-				app: mongodb
-		spec:
-			containers:
-				- name: mongodb
-				imagem: mongo:4.4.6
-				ports:
-					- containerPort: 27017
-				env:
-					- name: MONGO_INITDB_ROOT_USERNAME
-					value: mongouser
-					- name: MONGO_INITDB_ROOT_PASSWORD
-					value: mongopwd
----
+  selector:
+    matchLabels:
+     app: mongodb
+  template:
+    metadata:
+      labels:
+	app: mongodb
+    spec:
+	containers:
+ 	 - name: mongodb
+	   imagem: mongo:4.4.6
+	   ports:
+	 - containerPort: 27017
+	env:
+	 - name: MONGO_INITDB_ROOT_USERNAME
+	   value: mongouser
+	 - name: MONGO_INITDB_ROOT_PASSWORD
+	   value: mongopwd
+---     
 #Criacao Service MongoDB			
 apiVersion: v1
 kind: Service
