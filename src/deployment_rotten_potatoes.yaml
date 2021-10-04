@@ -27,12 +27,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-	name: mongodb
+  name: mongodb
 spec:
-	selector:
-		app: mongodb
-	ports:
-		- port: 27017
+  selector:
+    app: mongodb
+    ports:
+     - port: 27017
 type: clusterIP
 ---
 #Criacao Deployment Aplicacao
